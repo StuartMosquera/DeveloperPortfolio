@@ -1,6 +1,14 @@
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('../font/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.woff2') format('woff2-variations');
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
 html,
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 h1:focus {
