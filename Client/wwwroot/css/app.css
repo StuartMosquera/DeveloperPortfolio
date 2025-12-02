@@ -1,3 +1,19 @@
+:root {
+  --light-background: #e0e0e0;
+  --light-border: 1px solid #e0e0e080;
+  --light-box-shadow: -6px -6px 12px #fff, 6px 6px 12px #bebebe;
+  --light-box-shadow-inset: inset -6px -6px 12px #fff, inset 6px 6px 12px #bebebe;
+  --light-text: #202020;
+  --light-main-color: #3a5fbf;
+
+  --dark-background: #45474a;
+  --dark-border: 1px solid #45474a80;
+  --dark-box-shadow: -6px -6px 12px #4f5255, 6px 6px 12px #3b3c3f;
+  --dark-box-shadow-inset: inset -6px -6px 12px #4f5255, inset 6px 6px 12px #3b3c3f;
+  --dark-text: #f6f5f7;
+  --dark-main-color: #6d8ffe;
+}
+
 @font-face {
   font-family: 'Nunito Sans';
   src: url('../font/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.woff2') format('woff2-variations');
