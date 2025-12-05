@@ -6,3 +6,4 @@ My developer portfolio built with Blazor.
 
 - Blazor (WebAssembly)
 - Bootstrap
+- Azure Static Web Apps
