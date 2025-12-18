@@ -1,6 +1,8 @@
+using Client.Interfaces;
+
 namespace Client.Services;
 
-public class DrawerService
+public class DrawerService : IDrawerService
 {
     public bool IsOpen { get; private set; } = false;
 
