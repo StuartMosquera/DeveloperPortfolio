@@ -4,13 +4,13 @@ namespace Client.Services;
 
 public class ThemeService : IThemeService
 {
-    public bool IsDarkTheme { get; private set; } = false;
+    public bool IsDark { get; private set; } = false;
 
     public event Action? OnChange;
 
-    public void ToggleTheme()
+    public void Toggle()
     {
-        IsDarkTheme = !IsDarkTheme;
+        IsDark = !IsDark;
         NotifyStateChanged();
     }
 
