@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,16 @@
     <meta name="description" content="Stuart Mosquera's portfolio. A self-taught software developer and open source contributor. Building clean and scalable solutions with .NET technologies." />
     <base href="/" />
     <title>Stuart Mosquera</title>
+
+    <script>
+      (() => {
+        const storedTheme = localStorage.getItem('theme');
+        const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const theme = storedTheme ?? preferredTheme;
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      })();
+    </script>
+
     <link href="favicon/apple-touch-icon.png" type="image/png" sizes="180x180" rel="apple-touch-icon" />
     <link href="favicon/favicon-32x32.png" type="image/png" sizes="32x32" rel="icon" />
     <link href="favicon/favicon-16x16.png" type="image/png" sizes="16x16" rel="icon" />
@@ -32,5 +42,6 @@
     </div>
 
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src="js/utilities.js"></script>
   </body>
 </html>
