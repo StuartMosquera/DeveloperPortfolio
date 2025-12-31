@@ -2,9 +2,10 @@ namespace Client.Interfaces;
 
 public interface IThemeService
 {
-    public bool IsDark { get; }
-
     public event Action? OnChange;
 
-    public void Toggle();
+    public string Current { get; }
+
+    public Task InitializeAsync();
+    public Task ToggleAsync();
 }
