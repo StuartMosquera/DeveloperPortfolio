@@ -1,17 +1,19 @@
-:root {
-  --light-background: #e0e0e0;
-  --light-border: 1px solid #e0e0e080;
-  --light-box-shadow: -6px -6px 12px #fff, 6px 6px 12px #bebebe;
-  --light-box-shadow-inset: inset -6px -6px 12px #fff, inset 6px 6px 12px #bebebe;
-  --light-text: #202020;
-  --light-main-color: #3a5fbf;
+:root[data-bs-theme='light'] {
+  --background-color: #e0e0e0;
+  --border: 1px solid #e0e0e080;
+  --box-shadow: -6px -6px 12px #fff, 6px 6px 12px #bebebe;
+  --box-inner-shadow: inset -6px -6px 12px #fff, inset 6px 6px 12px #bebebe;
+  --text-color: #202020;
+  --main-color: #3a5fbf;
+}
 
-  --dark-background: #45474a;
-  --dark-border: 1px solid #45474a80;
-  --dark-box-shadow: -6px -6px 12px #4f5255, 6px 6px 12px #3b3c3f;
-  --dark-box-shadow-inset: inset -6px -6px 12px #4f5255, inset 6px 6px 12px #3b3c3f;
-  --dark-text: #f6f5f7;
-  --dark-main-color: #6d8ffe;
+:root[data-bs-theme='dark'] {
+  --background-color: #45474a;
+  --border: 1px solid #45474a80;
+  --box-shadow: -6px -6px 12px #4f5255, 6px 6px 12px #3b3c3f;
+  --box-inner-shadow: inset -6px -6px 12px #4f5255, inset 6px 6px 12px #3b3c3f;
+  --text-color: #f6f5f7;
+  --main-color: #6d8ffe;
 }
 
 @font-face {
@@ -27,43 +29,13 @@ body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 h1:focus {
   outline: none;
-}
-
-a,
-.btn-link {
-  color: #0071c1;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.btn:focus,
-.btn:active:focus,
-.btn-link.nav-link:focus,
-.form-control:focus,
-.form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-.content {
-  padding-top: 1.1rem;
-}
-
-.valid.modified:not([type=checkbox]) {
-  outline: 1px solid #26b050;
-}
-
-.invalid {
-  outline: 1px solid red;
-}
-
-.validation-message {
-  color: red;
 }
 
 #blazor-error-ui {
@@ -126,8 +98,4 @@ a,
 
 .loading-progress-text:after {
   content: var(--blazor-load-percentage-text, "Loading");
-}
-
-code {
-  color: #c02d76;
 }
