@@ -1,8 +1,6 @@
 'use strict';
 
-window.getTheme = () => {
-  return document.documentElement.getAttribute('data-bs-theme');
-};
+window.getTheme = () => document.documentElement.getAttribute('data-bs-theme');
 
 window.setTheme = theme => {
   document.documentElement.setAttribute('data-bs-theme', theme);
